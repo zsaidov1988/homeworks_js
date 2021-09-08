@@ -1,11 +1,15 @@
 
+function findAge(born, current) {
+  return current - born;
+}
+
 alert("Saytga xush kelibsiz!!!\nIltimos, so`rovnomani to`ldiring.");
 var firstName = prompt("Ismingizni kiriting", "Zafar").trim();
 var lastName = prompt("Sharifingizni kiriting", "Saidov").trim();
 var male = (lastName.endsWith("va")) ? "famale" : "male";
 var bornYear = prompt("Tug`ilgan yilingizni kiriting", "1988").trim();
 var currentYear = 2021;
-var age = currentYear - bornYear;
+var age = findAge(bornYear, currentYear);
 if (age < 18) {
   alert(`Xurmatli ${lastName} ${firstName}. Sizning yoshingiz ${age} da ekan. O'zbekiston Respublikasi Mehnat Kodeksiga muvofiq sizning yoshingiz ishga kirish uchun kichiklik qiladi`);
 }
